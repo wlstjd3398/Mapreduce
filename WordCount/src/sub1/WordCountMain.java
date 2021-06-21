@@ -18,12 +18,12 @@ import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
  * 내용 : MapReduce 단어 카운트 실습
  */
 
-public class Main {
+public class WordCountMain {
 	public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
 		Configuration conf = new Configuration();
 				Job job = new Job(conf, "WordCount");
 				
-				job.setJarByClass(Main.class);
+				job.setJarByClass(WordCountMain.class);
 				job.setMapperClass(WordCountMapper.class);
 				job.setReducerClass(WordCountReducer.class);
 				
